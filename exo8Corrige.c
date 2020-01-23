@@ -86,6 +86,7 @@ main ()
                 pv_monstre = pv_monstre - 20;
                 printf ("Le Monstre se soigne du poison ! \n");
                 pm_monstre = pm_monstre - 5 ;
+				poison_monstre = 0;
             }
     	}
           if (choix == 2)
@@ -122,6 +123,7 @@ main ()
     	    printf ("Heros se protege ! \n");
     	    printf ("Le Monstre se soigne de son poison ! \n");
     	    pm_monstre = pm_monstre - 5;
+			poison_monstre = 0;
     	  }
     	}
     	
@@ -175,6 +177,7 @@ main ()
                 }
                 printf ("Le Monstre se soigne du poison ! \n");
                 pm_monstre = pm_monstre - 5;
+				poison-monstre = 0;
     	    }
     	}
     	if (choix == 4 && poison_heros == 1)
@@ -183,6 +186,7 @@ main ()
     	    {
     	        printf ("Heros se soigne du poison ! \n");
     	        pm_heros = pm_heros - 5;
+				poison_heros = 0;
     	        printf ("Le Monstre attaque le Heros ! Heros perd 20 PV ! \n");
     	        pv_heros = pv_heros - 20;
     	    }
@@ -191,6 +195,7 @@ main ()
     	    {
     	        printf ("Heros se soigne du poison ! \n");
     	        pm_heros = pm_heros - 5;
+				poison_heros = 0;
     	        printf ("Le Monstre se protege ! Mais rien ne se passe... \n");
     	    }
     	    
@@ -198,6 +203,7 @@ main ()
     	    {
     	        printf ("Heros se soigne du poison ! \n");
     	        pm_heros = pm_heros - 5;
+				poison_heros = 0;
     	        printf ("Le Monstre empoisonne le Heros ! \n");
     	        pm_monstre = pm_monstre - 3;
     	    }
@@ -206,8 +212,10 @@ main ()
     	    {
     	        printf ("Heros se soigne du poison ! \n");
     	        pm_heros = pm_heros - 5;
+				poison_heros = 0;
     	        printf ("Le Monstre se soigne du poison ! \n");
     	        pm_monstre = pm_monstre - 5;
+				poison_monstre = 0;
     	    }
     	}
             printf ("Heros gagne 1 PM \n");
